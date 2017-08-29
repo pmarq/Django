@@ -1,0 +1,160 @@
+class Carro:
+    def __init__(self):
+        self.ARGO = True
+
+
+
+
+
+#motores
+class Motores:
+    def __init__(self):
+        self.m1p0 = 1.0
+        self.m1p1 = 1.1
+        self.m1p2 = 1.2
+        self.m1p3 = 1.3
+        self.m1p4 = 1.4
+        self.m1p5 = 1.5
+        self.m1p6 = 1.6
+        self.m1p7 = 1.7
+        self.m1p8 = 1.8
+        self.m1p9 = 1.9
+        self.m2p0 = 2.0
+        self.m2p1 = 2.1
+        self.m2p2 = 2.2
+        self.m2p3 = 2.3
+        self.m2p4 = 2.4
+        self.m2p5 = 2.5
+        self.m2p6 = 2.6
+        self.m2p7 = 2.7
+        self.m2p8 = 2.8
+        self.m2p9 = 2.9
+        self.m3p0 = 3.0
+        self.m3p1 = 3.1
+        self.m3p2 = 3.2
+        self.m3p3 = 3.3
+        self.m3p4 = 3.4
+        self.m3p5 = 3.5
+        self.m3p6 = 3.6
+        self.m3p7 = 3.7
+        self.m3p8 = 3.8
+        self.m3p9 = 3.9
+
+
+class Ano:
+    def __init__(self):
+        self.A1975 = 1975
+        self.A1976 = 1976
+        self.A1977 = 1977
+        self.A1978 = 1978
+        self.A1979 = 1979
+        self.A1980 = 1980
+        self.A1981 = 1981
+        self.A1982 = 1982
+        self.A1983 = 1983
+        self.A1984 = 1984
+        self.A1985 = 1985
+        self.A1986 = 1986
+        self.A1987 = 1987
+        self.A1988 = 1988
+        self.A1989 = 1989
+        self.A1990 = 1990
+        self.A1991 = 1991
+        self.A1992 = 1992
+        self.A1993 = 1993
+        self.A1994 = 1994
+        self.A1995 = 1995
+        self.A1996 = 1996
+        self.A1997 = 1997
+        self.A1998 = 1998
+        self.A1999 = 1999
+        self.A2000 = 2000
+        self.A2001 = 2001
+        self.A2002 = 2002
+        self.A2003 = 2003
+        self.A2004 = 2004
+        self.A2005 = 2005
+        self.A2006 = 2006
+        self.A2007 = 2007
+        self.A2008 = 2008
+        self.A2009 = 2009
+        self.A2010 = 2010
+        self.A2011 = 2011
+        self.A2012 = 2012
+        self.A2013 = 2013
+        self.A2014 = 2014
+        self.A2015 = 2015
+        self.A2016 = 2016
+        self.A2017 = 2017
+        self.A2018 = 2018
+
+car = Carro()
+Argo = car.ARGO
+
+ano = Ano()
+ano2018 = ano.A2018
+
+motor = Motores()
+mt1p0 = motor.m1p0
+
+print(Argo)
+print(ano2018)
+print(mt1p0)
+
+
+
+
+
+class Produto:
+    def __init__(self):
+        self.P3 = "  Coifa da alavanca de câmbio    "
+        self.P4 = "  Descansa braço "
+        self.P5 = "  Manopla do câmbio  "
+        self.P6 = "  Quebra-sol "
+        self.P7 = "  Tampão do porta-malas  "
+        self.P10 = "  Calha de chuva "
+        self.P11 = "  Capa de carro  "
+        self.P12 = "  Protetor do cárter "
+        self.P13 = "  Rack transversal   "
+        self.P14 = "  Spoiler lateral    "
+        self.P15 = "  Amortecedor dianteiro  "
+        self.P16 = "  Amortecedor do porta-malas "
+        self.P17 = "  Amortecedor traseiro   "
+        self.P18 = "  Kit do amortecedor dianteiro   "
+        self.P21 = "  Borracha da porta  "
+        self.P22 = "  Canaleta   "
+        self.P25 = "  Chave de seta  "
+        self.P26 = "  Interruptor do vidro   "
+        self.P27 = "  Soquete da lanterna traseira   "
+        self.P28 = "  Disco de freio "
+        self.P29 = "  Pastilha de freio  "
+        self.P30 = "  Friso do teto  "
+        self.P31 = "  Friso lateral  "
+        self.P32 = "  Cabo de vela   "
+        self.P33 = "  Vela de ignição    "
+        self.P34 = "  Farol  "
+        self.P35 = "  Farol de milha "
+        self.P36 = "  Kit de farol de milha  "
+        self.P37 = "  Kit lâmpada do farol   "
+        self.P38 = "  Lanterna dianteira "
+        self.P39 = "  Lanterna traseira  "
+        self.P40 = "  Cinto de segurança "
+        self.P41 = "  Assoalho   "
+        self.P42 = "  Capô dianteiro "
+        self.P43 = "  Para-lama dianteiro    "
+        self.P44 = "  Fechadura da porta "
+        self.P45 = "  Maçaneta externa da porta  "
+        self.P46 = "  Maçaneta interna da porta  "
+        self.P47 = "  Máquina de vidro   "
+        self.P50 = "  Entrada de ar do painel    "
+        self.P51 = "  Grade do para-choque   "
+        self.P52 = "  Para-choque dianteiro  "
+        self.P53 = "  Para-choque traseiro   "
+        self.P54 = "  Capa do retrovisor "
+        self.P55 = "  Lente do retrovisor com base   "
+        self.P56 = "  Lente do retrovisor sem base   "
+        self.P57 = "  Retrovisor externo "
+        self.P58 = "  Revestimento de porta  "
+        self.P59 = "  Tapete de borracha "
+        self.P60 = "  Limpador do para-brisa "
+
