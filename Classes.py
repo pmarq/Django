@@ -1,8 +1,13 @@
 Cliente
+  idCliente
   nome
   sobrenome
   cpf
-  Endereco
+  
+  
+  
+ Endereco
+    idCliente
     cep
     rua
     numero
@@ -10,57 +15,96 @@ Cliente
     bairro
     cidade
     estado
-  Contato
+    
+Contato
+    idCliente
     telefone
     whatsapp
     email
 
 Carro
-modelo
-motor
-ano
-versao
-km
-combustivel =  ['Alcool','Gasolina','Flex']
-cor
-portas =  ['2 portas','4 portas']
+  modelo = varchar
+  motor = varchar
+  ano = int
+  versao = varchar
+  km = int
+  combustivel =  ['Alcool','Gasolina','Flex']
+  cor = varchar
+  portas =  ['2 portas','4 portas']
+
+Cliente_Carro1:
+  idCarro
+  idCliente
   
-  OleoMotor
-    idCarro
-    espeficicao
-    capacidade
-    bujao
-    filtroOleo
-    
-  Arrefecimento
-    idCarro
-    capacidade
   
-  TabelaFipe
-    idCarro
-    preco
+OleoMotor
+  idOleoMotor
+  idCarro
+  OleoMotorProduto = FKidProduto ['oleo']
+  capacidade = varchar
+  bujao = FKidProduto ['Bujao']
+  filtroOleo = FKidProduto ['Filtro de Oleo']
+ 
+Arrefecimento
+  idArrefecimento
+  idCarro
+  capacidadeSistema = varchar
+  
+  
+
+TabelaFipe
+  idCarro
+  preco
     
   
-  Defeito
-    Produto
-    Servico
+Defeito
+  idCliente
+  DefeitoTitulo
+  
+  
     
     
-Orcamento
+Produto
+  idProduto
+  ProdutoDescricao
+  ProdutoCodigo
+  ProdutoPreco
+  ProdutoEstoque
+  ProdutoAplicacao
+  
+
+Servico
+  idServico
+  idCarro
+  ServicoTitulo
+  ServicoPreco
+  ServicoTempoExecucao
+  idProduto=Manytomany
+  
+  
+ClienteOficina
+  idCliente
+  idOficina
+  
 Oficina
-AutoPecas
+  idClienteOficina
+  OficinaNome
+  OficinaTelefone
+  OficinaRating
+
+  
 Anuncio
   idCliente
   idCarro
-  Detalhes
-    Carro.Ano
-    Carro.Km
-    Carro.combustivel
-    AceitoTroca =True or False
-    Carro.cor
-    Carro.porta
+Detalhes
+  Carro.Ano
+  Carro.Km
+  Carro.combustivel
+  AceitoTroca =True or False
+  Carro.cor
+  Carro.porta
     
-  Acessorios
-  Observacoes
+Acessorios
+Observacoes
   
   
