@@ -6,7 +6,7 @@ Cliente
   
   
   
- Endereco
+ Cliente_Endereco
     idCliente
     cep
     rua
@@ -16,7 +16,7 @@ Cliente
     cidade
     estado
     
-Contato
+Cliente_Contato
     idCliente
     telefone
     whatsapp
@@ -36,8 +36,11 @@ Cliente_Carro1:
   idCarro
   idCliente
   
+Cliente_Carro2:
+  idCarro
+  idCliente  
   
-OleoMotor
+CarroOleoMotor
   idOleoMotor
   idCarro
   OleoMotorProduto = FKidProduto ['oleo']
@@ -45,22 +48,46 @@ OleoMotor
   bujao = FKidProduto ['Bujao']
   filtroOleo = FKidProduto ['Filtro de Oleo']
  
-Arrefecimento
+CarroArrefecimento
   idArrefecimento
   idCarro
   capacidadeSistema = varchar
   
   
 
-TabelaFipe
+CarroTabelaFipe
   idCarro
   preco
     
   
-Defeito
-  idCliente
+CarroDefeito 
+  idCarro
+  idServico
+  idProduto
   DefeitoTitulo
   
+#Exemplo de um defeito:
+#Carro: Fox 1.0 8v Flex
+#Defeito: Vazamento de oleo no motor
+
+#Produtos a serem conferidos:
+  #Tampa de valvula
+    #ServiçoTitulo: Troca do sistema     
+  
+  #Interruptor de pressão do Oleo
+  
+  #AntiChama
+  
+    #ServiçoTitulo: Troca do sistema de anti-chamas
+    #ServicoProdutos: ['AntiChama-CWB1536']
+    #ServicoMenorPreco:[60,00]
+    #ServicoMaiorPreco: [90,00]
+  
+  #Carter
+
+#Serviço:
+#
+#
   
     
     
@@ -82,6 +109,8 @@ Servico
   idProduto=Manytomany
   
   
+//////////////////////////////////////////////////////  
+
 ClienteOficina
   idCliente
   idOficina
