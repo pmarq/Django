@@ -1,0 +1,43 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+
+# Create your models here.
+
+
+class Cliente(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=50, blank=False)
+    sobre_nome = models.CharField(max_length=100, blank=True)
+    nome_fantasia = models.CharField(max_length=100, blank=True)
+    cpf = models.CharField(max_length=20, blank=True)
+    rg = models.CharField(max_length=15, blank=True)
+    telefone = models.CharField(max_length=30, blank=True)
+    whatsapp = models.CharField(max_length=30, blank=True)
+    contato = models.CharField(max_length=30, blank=True)
+    email = models.EmailField(blank=True)
+    status = models.CharField(max_length=15, default='ATIVO', blank=False, null=False, choices=(
+        ('ATIVO', 'ATIVO'),
+        ('INATIVO', 'INATIVO'),
+        ('EXCLUIDO', 'EXCLUIDO'),
+        ('INADIPLENTE', 'INADIPLENTE'),
+    ))
+    data_nascimento_fundacao = models.DateField(blank=True, null=True)
+    endereco = models.CharField(max_length=50, blank=True)
+    numero = models.CharField(max_length=10, blank=True)
+    complemento = models.CharField(max_length=30, blank=True)
+    bairro = models.CharField(max_length=50, blank=True)
+    cidade = models.CharField(max_length=50, blank=False)
+    cep = models.CharField(max_length=10, blank=True)
+    estado = models.CharField(max_length=2, blank=True)
+    observacoes = models.TextField(max_length=200, blank=True)
+    data_registro = models.DateTimeField(auto_now_add=True)
+    data_alteracao = models.DateTimeField(auto_now=True)
+    usuario = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return '000' + str(self.id) + str(self.nome)
+
+    class Meta:
+        db_table = 'cliente'
+        ordering = ('nome',)
