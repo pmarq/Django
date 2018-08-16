@@ -1,0 +1,36 @@
+import sqlite3
+
+conn = sqlite3.connect('cars2018.db')
+c = conn.cursor()
+c.execute('select * from cars;')
+
+resulado  = c.fetchall()
+
+lista_carro = []
+
+for carro in resulado:
+    lista_carro.append(carro)
+
+lista_nova = []
+
+for i in lista_carro:
+    idcar = i[0]
+    nome= i[1]
+    motor = i[2]
+    anoinicio = int(i[3])
+    anofim = int(i[4])
+    versao = i[5]
+    montadora = i[6]
+    categoria = i[7]
+    descricao = i[8]
+    combustivel = i[9]
+    cambio = i[10]
+    dif_ano = anofim - anoinicio
+
+    for u in range(anoinicio,anofim +1,1):
+        print(str(idcar)+ " - " + str(nome) + " "+ str(motor)+" " + " " + str(u))
+        lista_nova.append([idcar,nome,motor,anoinicio,anofim,versao,montadora,categoria,descricao,combustivel,cambio])
+
+
+for i in lista_nova:
+    print(i)
