@@ -1,0 +1,77 @@
+
+
+#formBusca{
+
+
+    width:100%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    margin-right: 0%;
+    margin-left: 1%;
+
+}
+
+#footerDadosEmpresa{
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0.2;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    height:90%;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.busca{
+    padding:30px;
+
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.busca {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+#menuHome{
+
+}
+.topoTable{
+    border: 1px solid #dddddd;
+    text-align:center;
+    font-size: 25px;
+
+}
