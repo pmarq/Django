@@ -1,0 +1,122 @@
+.sectionBuscaCar{
+    position:relative;
+    height:20px;
+    left:30px;
+
+}
+
+#formBusca{
+
+    position:relative;
+    width:70%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0%;
+    margin-left: 1%;
+
+}
+
+#footerDadosEmpresa{
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0.2;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    height:90%;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#busca {
+  position:relative;
+  top:0px;
+  padding: 0px;
+
+
+}
+
+
+#menuHome{
+    position:relative;
+    top:10px;
+
+}
+.topoTable{
+    border: 1px solid #dddddd;
+    text-align:center;
+    font-size: 25px;
+
+}
+
+#retornoProduto{
+
+    position: relative;
+    width: 350px;
+    border: 1px solid grey;
+    padding: 65px;
+    margin: 55px;
+
+}
+
+.nomeProduto{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 340px;
+    height: 25px;
+
+}
+.fabricanteProduto{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 300px;
+    height: 25px;
+
+}
+  .precoProduto{
+    position: absolute;
+    top: 90px;
+    left: 200px;
+    width: 180px;
+    height: 25px;
+    font-size: 20px;
+
+}
+.escolhaProduto{
+    position: absolute;
+    top: 50px;
+    left: 190px;
+    width: 300px;
+    height: 25px;
+
+}
+.qtdProduto{
+  width: 50px;
+}
