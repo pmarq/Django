@@ -1,0 +1,18 @@
+def carbulk(request):
+    
+    
+    ficheiro = open('webcadepeca\cadepeca\car_django.csv')
+    reader = csv.reader(ficheiro)
+    lista = []
+    for i in reader:
+        lista.append(i)
+    for carro in lista:
+        lista_bulk=[]
+        car = carros(fkCarro=carro[1],modeloCarro=carro[2],
+                        motorCarro=carro[3],anoInicio=carro[4],
+                        anoFinal=carro[5],anoModelo=carro[6],
+                        versao=carro[6],montandora=carro[7],
+                        categoria=carro[8])
+        lista_bulk.append(car)
+        carros.objects.bulk_create(lista_bulk)
+    return Httpresponse('Deu certo')
